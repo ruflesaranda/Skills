@@ -1,0 +1,48 @@
+{
+  "id": "recommendation-engine",
+  "name": "Recommendation Engine",
+  "version": "1.0.0",
+  "description": "Motor principal que genera recomendaciones personalizadas basadas en análisis de negocios",
+  "author": "ruflesaranda",
+  "category": "recommendation",
+  "tags": ["recommendations", "personalization", "engine"],
+  "capabilities": [
+    "Generación de recomendaciones personalizadas",
+    "Scoring de relevancia",
+    "Filtrado inteligente",
+    "Ranking y priorización"
+  ],
+  "inputs": {
+    "business_analysis": {
+      "type": "object",
+      "description": "Análisis del negocio desde Business Analyzer",
+      "required": true
+    },
+    "user_preferences": {
+      "type": "object",
+      "description": "Preferencias del usuario",
+      "required": false
+    },
+    "max_recommendations": {
+      "type": "integer",
+      "description": "Número máximo de recomendaciones",
+      "required": false,
+      "default": 5
+    }
+  },
+  "outputs": {
+    "recommendations": {
+      "type": "array",
+      "description": "Lista de recomendaciones ordenadas por relevancia"
+    },
+    "reasoning": {
+      "type": "object",
+      "description": "Explicación de las recomendaciones"
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Métricas de confianza y relevancia"
+    }
+  },
+  "dependencies": ["business-analyzer"]
+}
