@@ -1,0 +1,53 @@
+{
+  "project": {
+    "name": "Business Recommendations WhatsApp",
+    "version": "1.0.0",
+    "description": "Sistema inteligente de recomendaciones de negocios por WhatsApp",
+    "author": "ruflesaranda",
+    "created": "2026-07-04"
+  },
+  "skills": [
+    {
+      "id": "business-analyzer",
+      "name": "Business Analyzer",
+      "version": "1.0.0",
+      "enabled": true,
+      "description": "Análisis y clasificación de características de negocios"
+    },
+    {
+      "id": "recommendation-engine",
+      "name": "Recommendation Engine",
+      "version": "1.0.0",
+      "enabled": true,
+      "description": "Motor principal de recomendaciones personalizadas"
+    },
+    {
+      "id": "whatsapp-integration",
+      "name": "WhatsApp Integration",
+      "version": "1.0.0",
+      "enabled": true,
+      "description": "Integración y formateo de mensajes WhatsApp"
+    },
+    {
+      "id": "data-processing",
+      "name": "Data Processing",
+      "version": "1.0.0",
+      "enabled": true,
+      "description": "Normalización y procesamiento de datos"
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "version": "1.0.0",
+      "enabled": true,
+      "description": "Funciones auxiliares y de soporte"
+    }
+  ],
+  "integrations": {
+    "whatsapp": {
+      "enabled": true,
+      "version": "1.0",
+      "requiresAuth": true
+    }
+  }
+}
