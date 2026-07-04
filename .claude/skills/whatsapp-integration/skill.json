@@ -1,0 +1,60 @@
+{
+  "id": "whatsapp-integration",
+  "name": "WhatsApp Integration",
+  "version": "1.0.0",
+  "description": "Integración completa con WhatsApp para envío de recomendaciones formateadas",
+  "author": "ruflesaranda",
+  "category": "integration",
+  "tags": ["whatsapp", "messaging", "integration", "communication"],
+  "capabilities": [
+    "Formateo de mensajes WhatsApp",
+    "Envío de recomendaciones",
+    "Gestión de conversaciones",
+    "Plantillas de mensajes personalizadas",
+    "Control de límites de tasa"
+  ],
+  "inputs": {
+    "phone_number": {
+      "type": "string",
+      "description": "Número de teléfono del usuario (+34..., +1...)",
+      "required": true
+    },
+    "recommendations": {
+      "type": "array",
+      "description": "Lista de recomendaciones a enviar",
+      "required": true
+    },
+    "message_type": {
+      "type": "string",
+      "enum": ["summary", "detailed", "interactive"],
+      "description": "Tipo de formato de mensaje",
+      "required": false,
+      "default": "summary"
+    },
+    "business_name": {
+      "type": "string",
+      "description": "Nombre del negocio",
+      "required": false
+    }
+  },
+  "outputs": {
+    "messages": {
+      "type": "array",
+      "description": "Mensajes formateados para WhatsApp"
+    },
+    "delivery_status": {
+      "type": "object",
+      "description": "Estado de entrega"
+    },
+    "message_id": {
+      "type": "string",
+      "description": "ID único de la sesión de mensajes"
+    }
+  },
+  "dependencies": ["recommendation-engine"],
+  "api_requirements": {
+    "whatsapp_api_key": "Requerido para acceso a API de WhatsApp",
+    "whatsapp_business_account_id": "ID de cuenta comercial de WhatsApp",
+    "webhook_url": "URL para recibir confirmaciones de entrega"
+  }
+}
