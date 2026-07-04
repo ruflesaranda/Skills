@@ -1,0 +1,49 @@
+{
+  "id": "data-processing",
+  "name": "Data Processing",
+  "version": "1.0.0",
+  "description": "Normalización, validación y procesamiento de datos de entrada",
+  "author": "ruflesaranda",
+  "category": "processing",
+  "tags": ["data", "processing", "validation", "normalization"],
+  "capabilities": [
+    "Normalización de datos",
+    "Validación de campos",
+    "Limpieza de datos",
+    "Transformación de formatos",
+    "Detección de anomalías"
+  ],
+  "inputs": {
+    "raw_data": {
+      "type": "object",
+      "description": "Datos crudos a procesar",
+      "required": true
+    },
+    "schema": {
+      "type": "object",
+      "description": "Esquema de validación",
+      "required": false
+    },
+    "strict_mode": {
+      "type": "boolean",
+      "description": "Si es true, rechaza datos inválidos",
+      "required": false,
+      "default": false
+    }
+  },
+  "outputs": {
+    "processed_data": {
+      "type": "object",
+      "description": "Datos procesados y normalizados"
+    },
+    "validation_report": {
+      "type": "object",
+      "description": "Reporte de validación"
+    },
+    "quality_score": {
+      "type": "number",
+      "description": "Puntuación de calidad de datos (0-100)"
+    }
+  },
+  "dependencies": []
+}

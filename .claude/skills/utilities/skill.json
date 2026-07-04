@@ -1,0 +1,24 @@
+{
+  "id": "utilities",
+  "name": "Utilities",
+  "version": "1.0.0",
+  "description": "Funciones auxiliares y de soporte para toda la plataforma de skills",
+  "author": "ruflesaranda",
+  "category": "utilities",
+  "tags": ["utilities", "helpers", "common", "support"],
+  "capabilities": [
+    "Formateo de textos",
+    "Cálculos y estadísticas",
+    "Manejo de fechas",
+    "Logging y debugging",
+    "Caché en memoria"
+  ],
+  "exports": [
+    "TextFormatter",
+    "DateUtils",
+    "Calculator",
+    "Logger",
+    "Cache"
+  ],
+  "dependencies": []
+}
