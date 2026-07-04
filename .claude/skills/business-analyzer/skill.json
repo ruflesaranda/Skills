@@ -1,0 +1,47 @@
+{
+  "id": "business-analyzer",
+  "name": "Business Analyzer",
+  "version": "1.0.0",
+  "description": "Analiza y clasifica características de negocios para generar recomendaciones precisas",
+  "author": "ruflesaranda",
+  "category": "analysis",
+  "tags": ["business", "analysis", "classification"],
+  "capabilities": [
+    "Clasificación de tipos de negocio",
+    "Análisis de características",
+    "Evaluación de necesidades",
+    "Identificación de oportunidades"
+  ],
+  "inputs": {
+    "business_name": {
+      "type": "string",
+      "description": "Nombre del negocio",
+      "required": true
+    },
+    "business_type": {
+      "type": "string",
+      "description": "Tipo de negocio (retail, service, technology, etc.)",
+      "required": true
+    },
+    "characteristics": {
+      "type": "array",
+      "description": "Características del negocio",
+      "required": false
+    }
+  },
+  "outputs": {
+    "classification": {
+      "type": "object",
+      "description": "Clasificación del negocio"
+    },
+    "analysis": {
+      "type": "object",
+      "description": "Análisis detallado"
+    },
+    "opportunities": {
+      "type": "array",
+      "description": "Oportunidades identificadas"
+    }
+  },
+  "dependencies": []
+}
